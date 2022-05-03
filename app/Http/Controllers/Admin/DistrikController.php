@@ -47,7 +47,8 @@ class DistrikController extends Controller
             'kota_id' => $request->kota_id,
             'nm_distrik' => $request->nm_distrik
         ]);
-        return redirect()->route('distrik.index');
+        return redirect()->route('distrik.index')
+            ->with('berhasil', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -90,8 +91,8 @@ class DistrikController extends Controller
             'kota_id' => $request->kota_id,
             'nm_distrik' => $request->nm_distrik
         ]);
-        return redirect()->route('distrik.index');
-            // ->with('berhasil', 'Data Berhasil Diubah');
+        return redirect()->route('distrik.index')
+            ->with('berhasil', 'Data Berhasil Diubah');
     }
 
     /**
@@ -103,7 +104,7 @@ class DistrikController extends Controller
     public function destroy($id)
     {
         distrik::destroy($id);
-        return redirect()->route('distrik.index');
-            // ->with('berhasil', 'Data Berhasil Dihapus');
+        return redirect()->route('distrik.index')
+            ->with('berhasil', 'Data Berhasil Dihapus');
     }
 }

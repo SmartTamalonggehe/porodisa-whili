@@ -2,8 +2,8 @@
 <script src="{{ asset('assets_admin/js/jquery-3.6.0.js') }}"></script>
 <script src="{{ asset('assets_admin/js/vendors.min.js') }}"></script>
 
-{{-- <script type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script> --}}
+<!-- {{-- <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script> --}} -->
 
 <script src="{{ asset('assets_admin/js/pages/chat-popup.js') }}"></script>
 <script src="{{ asset('assets_admin/assets/icons/feather-icons/feather.min.js') }}"></script>
@@ -13,3 +13,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slims
 <script src="{{ asset('assets_admin/js/template.js') }}"></script>
 
 <script src="{{ asset('assets_admin/js/pages/data-table.js') }}"></script>
+<script src="{{ mix('js/costume.js') }}"></script>
+
+@yield('script')
+<!-- @yield('script') -->

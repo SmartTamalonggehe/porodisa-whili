@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\User\AnggotaController;
 use App\Http\Controllers\User\DashboardController;
+use App\Http\Controllers\User\PengurusCOntroller;
 use App\Http\Controllers\User\UserKegiatanController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +19,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('cekAuth');
-});
 
-// Route::get('/dashboard', DashboardController::class,)->name('anggota');
-Route::resource('anggota', AnggotaController::class);
+// Route::get('/', function () {
+//     return view('user.dashboard.index');
+// })->name('anggota');
+
+
+// Route::middleware('auth')->group(function () {
+Route::get('/', [DashboardController::class, 'index'])->name('anggota');
+Route::resource('anggota', DashboardController::class);
+Route::resource('anggotaUser', AnggotaController::class);
 Route::resource('kegiatanUser', UserKegiatanController::class);
+Route::resource('pengurusUser', PengurusCOntroller::class);
+
+// });
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

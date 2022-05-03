@@ -1,6 +1,4 @@
 
-
-
 @extends('auth.layouts.default')
 
 @section('judul','Register')
@@ -15,8 +13,8 @@
 					<div class="col-lg-5 col-md-5 col-12">
 						<div class="bg-white rounded10 shadow-lg">
 							<div class="content-top-agile p-20 pb-0">
-								<h2 class="text-primary">Get started with Us</h2>
-								<p class="mb-0">Register a new membership</p>
+								<h2 class="text-primary">Registrasi</h2>
+								<p class="mb-0">Daftar akun</p>
 							</div>
 							<div class="p-40">
                             <form action="{{route('register')}}" method="post">
@@ -24,7 +22,7 @@
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-											<input type="text" id="nama" name="nama" class="form-control ps-15 bg-transparent" placeholder="Full Name">
+											<input type="text" id="name" name="name" class="form-control ps-15 bg-transparent" placeholder="Full Name">
 										</div>
 									</div>
 									<div class="form-group">
@@ -60,7 +58,7 @@
 									  </div>
 								</form>
 								<div class="text-center">
-                                <p class="mt-15 mb-0">Already have an account?<a href="{{route('login')}}" class="text-danger ms-5"> Sign In</a></p>
+                                <p class="mt-15 mb-0">Sudah memiliki akun?<a href="{{route('login')}}" class="text-danger ms-5"> Sign In</a></p>
 								</div>
 							</div>
 						</div>

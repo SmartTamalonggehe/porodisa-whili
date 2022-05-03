@@ -6,13 +6,27 @@
 @section('main')
 
 
+    <div class="content-header">
+        <div class="d-flex align-items-center">
+            <div class="me-auto">
+                <h2 class="page-title"> KABUPATEN/KOTA</h2>
+                <div class="d-inline-block align-items-center">
+                    <nav>
+                        
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 <!-- Main content -->
 <section class="content">
     <div class="row">
     <div class="col-12">
         <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Form Edit Data Kabupaten/Kota</h3>
+            <h4 class="box-title">Form Edit Data Kabupaten/Kota</h4>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

@@ -2,6 +2,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AnggotaController;
+use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DistrikController;
 use App\Http\Controllers\Admin\KegiatanController;
@@ -34,6 +35,6 @@ Route::prefix('admin')->middleware('auth', 'role:admin')->group(function () {
     Route::resource('pengurus', PengurusController::class);
     Route::resource('keuangan', KeuanganController::class);
     Route::resource('kegiatan', KegiatanController::class);
-
+    route::resource('berita', BeritaController::class);
     Route::resource('anggotaAdmin', AnggotaController::class);
 });

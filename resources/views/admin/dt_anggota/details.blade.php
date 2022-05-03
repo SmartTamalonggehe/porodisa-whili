@@ -8,14 +8,10 @@
 <div class="content-header">
     <div class="d-flex align-items-center">
         <div class="me-auto">
-            <h3 class="page-title">Anggota</h3>
+            <h2 class="page-title">ANGGOTA</h2>
             <div class="d-inline-block align-items-center">
                 <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                        <li class="breadcrumb-item" aria-current="page">Tables</li>
-                        <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
-                    </ol>
+                   
                 </nav>
             </div>
         </div>
@@ -29,7 +25,7 @@
     <div class="col-12">
         <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Detail Data Anggota</h3>
+            <h4 class="box-title">Detail Data Anggota</h4>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -86,11 +82,7 @@
                             <td>:</td>
                             <td>{{$anggota->pendidikan}}</td>
                         </tr>
-                        <tr>
-                            <td>Pekerjaan</td>
-                            <td>:</td>
-                            <td>{{$anggota->pekerjaan}}</td>
-                        </tr>
+                       
                     </tbody>
                 </table>
                 <div class="box-footer text-end">

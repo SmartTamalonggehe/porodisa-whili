@@ -6,22 +6,16 @@
 @section('main')
 
 <div class="content-header">
-    <div class="d-flex align-items-center">
-        <div class="me-auto">
-            <h3 class="page-title">Pengurus</h3>
-            <div class="d-inline-block align-items-center">
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                        <li class="breadcrumb-item" aria-current="page">Tables</li>
-                        <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
-                    </ol>
-                </nav>
+        <div class="d-flex align-items-center">
+            <div class="me-auto">
+                <h2 class="page-title">PENGURUS</h2>
+                <div class="d-inline-block align-items-center">
+                    
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
 
 <!-- Main content -->
 <section class="content">
@@ -29,7 +23,7 @@
     <div class="col-12">
         <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Detail Data Pengurus</h3>
+            <h4 class="box-title">Detail Data Pengurus</h4>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

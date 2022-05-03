@@ -42,7 +42,8 @@ class KotaController extends Controller
         kota::create([
             'nm_kota' => $request->nm_kota
         ]);
-        return redirect()->route('kota.index');
+        return redirect()->route('kota.index')
+            ->with('berhasil', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -85,8 +86,8 @@ class KotaController extends Controller
         kota::find($id)->update([
             'nm_kota' => $request->nm_kota
         ]);
-        return redirect()->route('kota.index');
-            // ->with('berhasil', 'Data Berhasil Diubah');
+        return redirect()->route('kota.index')
+            ->with('berhasil', 'Data Berhasil Diubah');
     }
 
     /**
@@ -98,7 +99,7 @@ class KotaController extends Controller
     public function destroy($id)
     {
         kota::destroy($id);
-        return redirect()->route('kota.index');
-            // ->with('berhasil', 'Data Berhasil Dihapus');
+        return redirect()->route('kota.index')
+            ->with('berhasil', 'Data Berhasil Dihapus');
     }
 }

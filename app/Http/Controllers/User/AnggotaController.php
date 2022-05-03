@@ -18,9 +18,9 @@ class AnggotaController extends Controller
     {
         $kelurahan = kelurahan::all();
         $anggota = anggota::all();
-        return view('user.anggota.index',[
+        return view('user.anggota.index', [
             'kelurahan' => $kelurahan,
-            'anggota' =>$anggota
+            'anggota' => $anggota
         ]);
     }
 
@@ -51,8 +51,8 @@ class AnggotaController extends Controller
             'agama' => $request->agama,
             'jenkel' => $request->jenkel,
             'pendidikan' => $request->pendidikan,
-            'pekerjaan' => $request->pekerjaan,
-            'lokasi' => $request->lokasi
+            'longitude' => $request->longitude,
+            'latitude' => $request->latitude,
         ]);
         return redirect()->route('anggota.index');
     }

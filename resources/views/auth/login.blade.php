@@ -12,8 +12,8 @@
                 <div class="col-lg-5 col-md-5 col-12">
                     <div class="bg-white rounded10 shadow-lg">
                         <div class="content-top-agile p-20 pb-0">
-                            <h2 class="text-primary">Let's Get Started</h2>
-                            <p class="mb-0">Sign in to continue to WebkitX.</p>
+                            <h2 class="text-primary">Login</h2>
+                            <p class="mb-0">Masukan email dan password untuk melanjutkan ke Aplikasi.</p>
                         </div>
                         <div class="p-40">
                         <form action="{{route('login')}}" method="post">
@@ -31,19 +31,7 @@
                                     </div>
                                 </div>
                                   <div class="row">
-                                    <div class="col-6">
-                                      <div class="checkbox">
-                                        <input type="checkbox" id="basic_checkbox_1" >
-                                        <label for="basic_checkbox_1">Remember Me</label>
-                                      </div>
-                                    </div>
-                                    <!-- /.col -->
-                                    <div class="col-6">
-                                     <div class="fog-pwd text-end">
-                                        <a href="javascript:void(0)" class="hover-warning"><i class="ion ion-locked"></i> Forgot pwd?</a><br>
-                                      </div>
-                                    </div>
-                                    <!-- /.col -->
+                                  
                                     <div class="col-12 text-center">
                                       <button type="submit" class="btn btn-danger mt-10">SIGN IN</button>
                                     </div>
@@ -51,7 +39,7 @@
                                   </div>
                             </form>
                             <div class="text-center">
-                                <p class="mt-15 mb-0">Don't have an account? <a href="{{route('register')}}" class="text-warning ms-5">Sign Up</a></p>
+                                <p class="mt-15 mb-0">Tidak punya akun? <a href="{{route('register')}}" class="text-warning ms-5">Registrasi</a></p>
                             </div>
                         </div>
                     </div>

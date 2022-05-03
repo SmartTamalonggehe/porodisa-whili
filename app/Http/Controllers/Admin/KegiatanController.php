@@ -53,7 +53,8 @@ class KegiatanController extends Controller
             'foto' => $nama_foto
 
         ]);
-        return redirect()->route('kegiatan.index');
+        return redirect()->route('kegiatan.index')
+        ->with('berhasil', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -104,7 +105,8 @@ class KegiatanController extends Controller
             'foto' => $nama_foto
 
         ]);
-        return redirect()->route('kegiatan.index');
+        return redirect()->route('kegiatan.index')
+            ->with('berhasil', 'Data Berhasil Diubah');
     }
 
     /**
@@ -116,7 +118,7 @@ class KegiatanController extends Controller
     public function destroy($id)
     {
         kegiatan::destroy($id);
-        return redirect()->route('kegiatan.index');
-            // ->with('Data Berhasil Dihapus');
+        return redirect()->route('kegiatan.index')
+            ->with('Data Berhasil Dihapus');
     }
 }

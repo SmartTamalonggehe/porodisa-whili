@@ -1,8 +1,9 @@
 @include('user.layouts.head')
 
-<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
-    <div class="wrapper">
-        <div id="loader"></div>
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
 
             @include('user.layouts.navbar')
               

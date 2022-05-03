@@ -8,7 +8,7 @@
     <div class="content-header">
         <div class="d-flex align-items-center">
             <div class="me-auto">
-                <h3 class="page-title">Kegiatan</h3>
+                <h2 class="page-title">KEGIATAN</h2>
                 <div class="d-inline-block align-items-center">
                     <nav>
 
@@ -18,13 +18,11 @@
 
         </div>
     </div>
-
-    <section class="content">
-        <!-- START Card With Image -->
-         
-          @foreach ( $kegiatan as $item)
-          <div class="row">
-            <div class="col-md-12 col-lg-4">
+   
+		<section class="content">
+      @foreach ( $kegiatan as $item)
+          <!-- <div class="row"> -->
+            <div class="col-md-1 col-lg-12">
                 <div class="card">
                   <img class="card-img-top" src="{{asset('storage/kegiatan/' .$item->foto)}}" alt="Card image cap">
                   <div class="card-body">
@@ -33,11 +31,15 @@
                   </div>
                 </div>
             </div>
-          </div>
-          <!-- /.row -->
-          @endforeach
+          <!-- </div> -->
+      @endforeach
 
     </section>
+	
+        
+
+   
+
 
 @endsection
 

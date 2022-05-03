@@ -60,7 +60,8 @@ class PengurusController extends Controller
             'foto' => $nama_foto
 
         ]);
-        return redirect()->route('pengurus.index');
+        return redirect()->route('pengurus.index')
+         ->with('berhasil', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -120,7 +121,8 @@ class PengurusController extends Controller
             'pekerjaan' => $request->pekerjaan,
             'foto' => $nama_foto
         ]);
-        return redirect()->route('pengurus.index');
+        return redirect()->route('pengurus.index')
+        ->with('berhasil', 'Data Berhasil Diubah');
     }
 
     /**
@@ -131,6 +133,8 @@ class PengurusController extends Controller
      */
     public function destroy($id)
     {
-        //
+        pengurus::destroy($id);
+        return redirect()->route('pengurus.index')
+            ->with('Data Berhasil Dihapus');
     }
 }

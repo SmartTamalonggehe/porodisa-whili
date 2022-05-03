@@ -4,19 +4,12 @@
 
 @section('main')
 
-
-    <div class="content-header">
+<div class="content-header">
         <div class="d-flex align-items-center">
             <div class="me-auto">
-                <h3 class="page-title">Data Pengurus</h3>
+                <h2 class="page-title">PENGURUS</h2>
                 <div class="d-inline-block align-items-center">
-                    {{-- <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                            <li class="breadcrumb-item" aria-current="page">Tables</li>
-                            <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
-                        </ol>
-                    </nav> --}}
+                    
                 </div>
             </div>
 
@@ -30,7 +23,7 @@
             <div class="col-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Form Tambah Data Pengurus</h3>
+                        <h4 class="box-title">Form Tambah Data Pengurus</h4>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -88,7 +81,7 @@
                                         <div class="form-group">
                                             <label class="form-label" for="agama">Agama</label>
                                             <div class="demo-radio-button">
-                                                <input name="agama" type="radio" id="kristen" value="Kriten" class="with-gap radio-col-success"  />
+                                                <input name="agama" type="radio" id="kristen" value="Kristen" class="with-gap radio-col-success"  />
                                                 <label for="kristen">Kristen Protestan</label>
                                                 <input name="agama" type="radio" id="katolik" value="Katolik" class="with-gap radio-col-success" />
                                                 <label for="katolik">Katolik</label>

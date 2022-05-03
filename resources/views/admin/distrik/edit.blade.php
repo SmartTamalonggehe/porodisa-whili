@@ -6,6 +6,19 @@
 @section('main')
 
 
+<div class="content-header">
+    <div class="d-flex align-items-center">
+        <div class="me-auto">
+            <h2 class="page-title"> DISTRIK</h2>
+            <div class="d-inline-block align-items-center">
+               
+            </div>
+        </div>
+
+    </div>
+</div>
+   
+
 <!-- Main content -->
 <section class="content">
     <div class="row">

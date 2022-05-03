@@ -17,3 +17,5 @@
 	<script src="{{ asset('assets_user/js/template.js') }}"></script>
 
 	<script src="{{ asset('assets_user/js/pages/data-table.js') }}"></script>
+
+    @yield('script')

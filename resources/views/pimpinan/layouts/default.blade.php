@@ -1,29 +1,23 @@
-@include('pimpinan.layouts.head')
+    @include('pimpinan.layouts.head')
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-    <div class="wrapper">
+    @include('pimpinan.layouts.head')
+              
+        <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+	
+        <div class="wrapper">
         <div id="loader"></div>
+    
+     @include('pimpinan.layouts.navbar')
 
-        @include('pimpinan.layouts.navbar')
+        @yield('main')
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <div class="container-full">
-                <!-- Content Header (Page header) -->
+    @include('pimpinan.layouts.sidebar')
 
-                @yield('main')
+    @include('pimpinan.layouts.footer')
 
-                @include('pimpinan.layouts.sidebar')
+    @include('pimpinan.layouts.script')
+  	
 
-            </div>
-            <!-- end page content -->
-        </div>
-        <!-- end page-wrapper -->
+    </body>
+    </html>
 
-        @include('pimpinan.layouts.footer')
-
-        @include('pimpinan.layouts.script')
-
-</body>
-
-</html>

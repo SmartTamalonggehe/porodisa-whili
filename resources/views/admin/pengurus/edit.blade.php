@@ -6,6 +6,18 @@
 @section('main')
 
 
+<div class="content-header">
+        <div class="d-flex align-items-center">
+            <div class="me-auto">
+                <h2 class="page-title">PENGURUS</h2>
+                <div class="d-inline-block align-items-center">
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -104,7 +116,7 @@
                 <!-- /.box-body -->
                 <div class="box-footer text-end">
                     <button type="submit" class="btn btn-warning me-1">
-                    <i class="ti-trash"></i><a href="{{route('pengurus.index')}}"> batal</a>
+                  <a href="{{route('pengurus.index')}}"> Batal</a>
                     </button>
                     <button type="submit" class="btn btn-primary">
                         <i class="ti-save-alt"></i> Simpan

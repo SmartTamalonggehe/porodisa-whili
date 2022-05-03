@@ -26,8 +26,8 @@ class CreateAnggotaTable extends Migration
             $table->string('agama', 9);
             $table->string('jenkel', 20);
             $table->string('pendidikan', 10);
-            $table->string('pekerjaan', 20);
-            $table->string('lokasi', 50);
+            $table->string('longitude', 100);
+            $table->string('latitude', 100);
             $table->timestamps();
         });
     }

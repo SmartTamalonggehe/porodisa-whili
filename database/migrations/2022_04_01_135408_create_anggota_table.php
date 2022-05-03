@@ -15,6 +15,11 @@ class CreateAnggotaTable extends Migration
     {
         Schema::create('anggota', function (Blueprint $table) {
             $table->id();
+            // relation by user_id
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->string('no_penduduk', 20);
             $table->string('nama', 50);
             $table->string('tempat', 30);

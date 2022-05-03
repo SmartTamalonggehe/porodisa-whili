@@ -26,25 +26,6 @@
                                 class="path2"></span><span class="path3"></span></span>
                     </a>
                 </li>
-                <li class="btn-group nav-item d-none d-xl-inline-block">
-                    <a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
-                        <i class="icon-Chat"><span class="path1"></span><span
-                                class="path2"></span></i>
-                    </a>
-                </li>
-                <li class="btn-group nav-item d-none d-xl-inline-block">
-                    <a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Mailbox">
-                        <i class="icon-Mailbox"><span class="path1"></span><span
-                                class="path2"></span></i>
-                    </a>
-                </li>
-                <li class="btn-group nav-item d-none d-xl-inline-block">
-                    <a href="extra_taskboard.html" class="waves-effect waves-light nav-link svg-bt-icon"
-                        title="Taskboard">
-                        <i class="icon-Clipboard-check"><span class="path1"></span><span
-                                class="path2"></span><span class="path3"></span></i>
-                    </a>
-                </li>
             </ul>
         </div>
 
@@ -57,23 +38,6 @@
                                 class="path2"></span></i>
                     </a>
                 </li>
-                <li class="btn-group d-lg-inline-flex d-none">
-                    <div class="app-menu">
-                        <div class="search-bx mx-5">
-                            <form>
-                                <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="Search" aria-label="Search"
-                                        aria-describedby="button-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn" type="submit" id="button-addon3"><i
-                                                class="ti-search"></i></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-
                 <!-- User Account-->
                 <li class="dropdown user user-menu">
                     <a href="#" class="waves-effect waves-light dropdown-toggle" data-bs-toggle="dropdown" title="User">

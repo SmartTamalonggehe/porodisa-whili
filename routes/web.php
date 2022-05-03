@@ -25,14 +25,13 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 // })->name('anggota');
 
 
-// Route::middleware('auth')->group(function () {
-Route::get('/', [DashboardController::class, 'index'])->name('anggota');
-Route::resource('anggota', DashboardController::class);
-Route::resource('anggotaUser', AnggotaController::class);
-Route::resource('kegiatanUser', UserKegiatanController::class);
-Route::resource('pengurusUser', PengurusCOntroller::class);
-
-// });
+Route::middleware('auth', 'role:anggota')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('anggota');
+    Route::resource('anggota', DashboardController::class);
+    Route::resource('anggotaUser', AnggotaController::class);
+    Route::resource('kegiatanUser', UserKegiatanController::class);
+    Route::resource('pengurusUser', PengurusCOntroller::class);
+});
 
 
 

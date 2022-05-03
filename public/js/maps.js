@@ -2173,8 +2173,9 @@ var coorFromDb = /*#__PURE__*/function () {
                 offset: 25
               }).setHTML("\n                <div class=\"popup\">\n                    <h5>".concat(anggota.nama, "</h5>\n                    <p>").concat(anggota.no_penduduk, " <br> ").concat(anggota.kelurahan.nm_kelurahan, "</p>\n                </div>\n                "))).addTo(_tools__WEBPACK_IMPORTED_MODULE_1__.map);
             });
+            _tools__WEBPACK_IMPORTED_MODULE_1__.map.addControl(new mapboxgl.FullscreenControl());
 
-          case 4:
+          case 5:
           case "end":
             return _context.stop();
         }
@@ -2185,19 +2186,7 @@ var coorFromDb = /*#__PURE__*/function () {
   return function coorFromDb() {
     return _ref.apply(this, arguments);
   };
-}(); //     const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-//         "Construction on the Washington Monument began in 1848."
-//     );
-//     const marker2 = new mapboxgl.Marker({ color: "blue" })
-//         .setLngLat([140.55494237865815, -2.5264095348899644])
-//         .addTo(map);
-//     // create the marker
-//     new mapboxgl.Marker(marker2)
-//         .setLngLat([140.55494237865815, -2.5264095348899644])
-//         .setPopup(popup) // sets a popup on this marker
-//         .addTo(map);
-// };
-
+}();
 
 coorFromDb();
 

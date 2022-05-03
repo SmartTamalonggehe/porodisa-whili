@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\anggota;
 use App\Models\kelurahan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnggotaController extends Controller
 {
@@ -44,6 +45,7 @@ class AnggotaController extends Controller
     {
         anggota::create([
             'no_penduduk' => $request->no_penduduk,
+            'user_id' => Auth::user()->id,
             'nama' => $request->nama,
             'tempat' => $request->tempat,
             'tgl_lahir' => $request->tgl_lahir,
@@ -54,7 +56,7 @@ class AnggotaController extends Controller
             'longitude' => $request->longitude,
             'latitude' => $request->latitude,
         ]);
-        return redirect()->route('anggota.index');
+        return redirect()->route('anggotaUser.index');
     }
 
     /**
@@ -65,7 +67,10 @@ class AnggotaController extends Controller
      */
     public function show($id)
     {
-        //
+        $anggota = anggota::find($id);
+        return view('user.anggota.detail', [
+            'anggota' => $anggota
+        ]);
     }
 
     /**
@@ -99,6 +104,8 @@ class AnggotaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        anggota::destroy($id);
+        return redirect()->route('anggotaUser.index')
+            ->with('Data Berhasil Dihapus');
     }
 }

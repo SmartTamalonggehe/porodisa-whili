@@ -16,4 +16,9 @@ class anggota extends Model
     {
         return $this->belongsTo(kelurahan::class);
     }
+    public function user()
+    {
+        // one one
+        return $this->hasOne(user::class);
+    }
 }

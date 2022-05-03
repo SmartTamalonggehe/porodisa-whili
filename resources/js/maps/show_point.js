@@ -19,21 +19,7 @@ const coorFromDb = async () => {
             )
             .addTo(map);
     });
+    map.addControl(new mapboxgl.FullscreenControl());
 };
-
-//     const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-//         "Construction on the Washington Monument began in 1848."
-//     );
-
-//     const marker2 = new mapboxgl.Marker({ color: "blue" })
-//         .setLngLat([140.55494237865815, -2.5264095348899644])
-//         .addTo(map);
-
-//     // create the marker
-//     new mapboxgl.Marker(marker2)
-//         .setLngLat([140.55494237865815, -2.5264095348899644])
-//         .setPopup(popup) // sets a popup on this marker
-//         .addTo(map);
-// };
 
 coorFromDb();

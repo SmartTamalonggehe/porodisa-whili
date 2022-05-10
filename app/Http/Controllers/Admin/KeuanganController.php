@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class KeuanganController extends Controller
 {
+    private function validation($request)
+    {
+        $request->validate([
+            'tgl' => 'required',
+            'keterangan' => 'required',
+            'debet' => 'required',
+            'kredit' => 'required',
+            'saldo' => 'required',
+        ]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +26,8 @@ class KeuanganController extends Controller
     public function index()
     {
         $keuangan = keuangan::all();
-        return view('admin.keuangan.index',[
-            'keuangan' =>$keuangan
+        return view('admin.keuangan.index', [
+            'keuangan' => $keuangan
         ]);
     }
 
@@ -39,6 +49,10 @@ class KeuanganController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validation($request);
+        // validation not success then return back
+
+
         keuangan::create([
             'tgl' => $request->tgl,
             'keterangan' => $request->keterangan,

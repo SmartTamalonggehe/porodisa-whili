@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/costume.js": "/js/costume.js",
     "/js/maps.js": "/js/maps.js",
+    "/js/components.js": "/js/components.js",
+    "/js/keuangan.js": "/js/keuangan.js",
     "/css/app.css": "/css/app.css"
 }

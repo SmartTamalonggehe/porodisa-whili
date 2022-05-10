@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\API\AnggotaApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\AnggotaApi;
+use App\Http\Controllers\API\KeuanganApi;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // route anggotaApi
 Route::get('anggota', [AnggotaApi::class, 'index'])->name('api.anggota');
+// route keuanganApi
+Route::get('keuangan', [KeuanganApi::class, 'index'])->name('api.keuangan');

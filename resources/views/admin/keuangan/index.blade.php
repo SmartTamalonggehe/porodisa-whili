@@ -9,11 +9,11 @@
         <div class="d-flex align-items-center">
             <div class="me-auto">
                 <h2 class="page-title">KEUANGAN</h3>
-                <div class="d-inline-block align-items-center">
-                    <nav>
-                        
-                    </nav>
-                </div>
+                    <div class="d-inline-block align-items-center">
+                        <nav>
+
+                        </nav>
+                    </div>
             </div>
 
         </div>
@@ -30,7 +30,17 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                    <form class="form" action="{{route('keuangan.store')}}" method="post">
+                        {{-- errors --}}
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form class="form" action="{{ route('keuangan.store') }}" method="post">
                             @csrf
                             <div class="box-body">
                                 <div class="row">
@@ -50,21 +60,22 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Debet</label>
-                                            <input type="text" class="form-control" id="debet" name="debet"
+                                            <input type="text" class="form-control number" id="debet" name="debet" value="0"
                                                 placeholder="Masukan Debet ">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Kredit </label>
-                                            <input type="text" class="form-control" id="kredit" name="kredit"
-                                                placeholder="Masukan kredit ">
+                                            <input type="text" class="form-control number" id="kredit" name="kredit"
+                                                value="0" placeholder="Masukan kredit ">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Saldo </label>
-                                            <input type="text" class="form-control" id="saldo" name="saldo">
+                                            <input type="text" class="form-control number" id="saldo" name="saldo"
+                                                value="0">
                                         </div>
                                     </div>
 
@@ -127,17 +138,19 @@
                                             <td align="center">
                                                 <a href="{{ route('keuangan.edit', $item->id) }}"><button type="submit"
                                                         class="waves-effect waves-light btn btn-outline btn-success mb-5">Edit</button></a>
-                                                <form action="{{ route('keuanagn.destroy', $item->id) }}" method="post" id="formHapus" class="d-inline">
-                                                @csrf
+                                                <form action="{{ route('keuangan.destroy', $item->id) }}" method="post"
+                                                    id="formHapus" class="d-inline">
+                                                    @csrf
                                                     @method('DELETE')
                                                     <button type="submit"
-                                                    class="waves-effect waves-light btn btn-outline btn-danger mb-5" onclick="return confirm('Anda Yakin Menghapus Data Ini? ')">Hapus</button>
-                                                </form> 
+                                                        class="waves-effect waves-light btn btn-outline btn-danger mb-5"
+                                                        onclick="return confirm('Anda Yakin Menghapus Data Ini? ')">Hapus</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
-                              
+
                             </table>
                         </div>
                     </div>
@@ -151,4 +164,9 @@
     <!-- /.content -->
 
 
+@endsection
+
+@section('script')
+    <script src="{{ mix('js/components.js') }}"></script>
+    <script src="{{ mix('js/keuangan.js') }}"></script>
 @endsection

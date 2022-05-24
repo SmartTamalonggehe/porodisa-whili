@@ -79,6 +79,14 @@
 
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('arsip.index') }}">
+                            <i class="cc AMP-alt"><span class="path1"></span><span
+                                    class="path2"></span></i>
+                            <span>Arsip</span>
+
+                        </a>
+                    </li>
 
 
                 </ul>

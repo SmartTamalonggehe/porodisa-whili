@@ -2,6 +2,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AnggotaController;
+use App\Http\Controllers\Admin\ArsipController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DistrikController;
@@ -37,4 +38,5 @@ Route::prefix('admin')->middleware('auth', 'role:admin')->group(function () {
     Route::resource('kegiatan', KegiatanController::class);
     route::resource('berita', BeritaController::class);
     Route::resource('anggotaAdmin', AnggotaController::class);
+    Route::resource('arsip', ArsipController::class);
 });

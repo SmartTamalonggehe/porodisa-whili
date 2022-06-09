@@ -3,6 +3,7 @@
 use App\Http\Controllers\User\AnggotaController;
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\PengurusCOntroller;
+use App\Http\Controllers\User\UserArsipController;
 use App\Http\Controllers\User\UserKegiatanController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,7 @@ Route::middleware('auth', 'role:anggota')->group(function () {
     Route::resource('anggotaUser', AnggotaController::class);
     Route::resource('kegiatanUser', UserKegiatanController::class);
     Route::resource('pengurusUser', PengurusCOntroller::class);
+    Route::resource('arsipUser', UserArsipController::class);
 });
 
 

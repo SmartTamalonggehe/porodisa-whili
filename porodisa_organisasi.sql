@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
 --
--- Host: localhost    Database: porosida_organisasi
+-- Host: localhost    Database: porodisa_organisasi
 -- ------------------------------------------------------
 -- Server version	8.0.29
 
@@ -52,6 +52,34 @@ CREATE TABLE `anggota` (
 LOCK TABLES `anggota` WRITE;
 /*!40000 ALTER TABLE `anggota` DISABLE KEYS */;
 /*!40000 ALTER TABLE `anggota` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `arsip`
+--
+
+DROP TABLE IF EXISTS `arsip`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `arsip` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `nm_arsip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_arsip` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `arsip`
+--
+
+LOCK TABLES `arsip` WRITE;
+/*!40000 ALTER TABLE `arsip` DISABLE KEYS */;
+INSERT INTO `arsip` VALUES (2,'Undangan',NULL,'1653366991.jpg','2022-05-23 19:36:15','2022-05-23 19:36:32');
+/*!40000 ALTER TABLE `arsip` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -260,7 +288,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,7 +297,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1),(5,'2022_04_01_135306_create_kota_table',1),(6,'2022_04_01_135326_create_distrik_table',1),(7,'2022_04_01_135346_create_kelurahan_table',1),(8,'2022_04_01_135408_create_anggota_table',1),(9,'2022_04_05_133026_create_keuangan_table',1),(10,'2022_04_06_082600_create_pengurus_table',1),(11,'2022_04_06_083927_create_kegiatan_table',1),(12,'2022_04_12_104052_laratrust_setup_tables',1),(13,'2022_04_20_052454_create_berita_table',1);
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1),(5,'2022_04_01_135306_create_kota_table',1),(6,'2022_04_01_135326_create_distrik_table',1),(7,'2022_04_01_135346_create_kelurahan_table',1),(8,'2022_04_01_135408_create_anggota_table',1),(9,'2022_04_05_133026_create_keuangan_table',1),(10,'2022_04_06_082600_create_pengurus_table',1),(11,'2022_04_06_083927_create_kegiatan_table',1),(12,'2022_04_12_104052_laratrust_setup_tables',1),(13,'2022_04_20_052454_create_berita_table',1),(14,'2022_05_23_163318_create_arsip_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -495,7 +523,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'admin','Admin','Admin','2022-05-09 12:35:29','2022-05-09 12:35:29'),(2,'anggota','Anggota','Anggota','2022-05-09 12:35:29','2022-05-09 12:35:29'),(3,'pimpinan','Pimpinan','Pimpinan','2022-05-09 12:35:29','2022-05-09 12:35:29');
+INSERT INTO `roles` VALUES (1,'admin','Admin','Admin','2022-05-23 19:13:48','2022-05-23 19:13:48'),(2,'anggota','Anggota','Anggota','2022-05-23 19:13:48','2022-05-23 19:13:48'),(3,'pimpinan','Pimpinan','Pimpinan','2022-05-23 19:13:48','2022-05-23 19:13:48');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -526,7 +554,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Admin','admin@gmail.com',NULL,'$2y$10$H.KbH4VQJhR/jWzkef6Q9OM8m.23lihgjjnwcX6o3jKOhZMA4yojO',NULL,'2022-05-09 12:35:30','2022-05-09 12:35:30'),(2,'Pimpinan','pimpinan@gmail.com',NULL,'$2y$10$RmxljeaMYPGT2QgDzbfjVOgdl7PW3Wj1gfc9d1WsJBdEaCpj8QC96',NULL,'2022-05-09 12:35:30','2022-05-09 12:35:30');
+INSERT INTO `users` VALUES (1,'Admin','admin@gmail.com',NULL,'$2y$10$IoB5VVAw2WDvJS6wBx49L.oybxaNSnu10WpqCKhqBhkAaS02YWl2S',NULL,'2022-05-23 19:13:48','2022-05-23 19:13:48'),(2,'Pimpinan','pimpinan@gmail.com',NULL,'$2y$10$yl78KSfnu5C66WB8LRWyQ.kKQXHghqqXDPi9V6Tu6PB3MWaDkfIgu',NULL,'2022-05-23 19:13:48','2022-05-23 19:13:48');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -539,4 +567,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-10  6:36:50
+-- Dump completed on 2022-05-24 13:37:56

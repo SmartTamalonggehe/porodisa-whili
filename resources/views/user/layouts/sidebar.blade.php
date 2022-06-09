@@ -39,6 +39,14 @@
                             <span class="pull-right-container"></span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('arsipUser.index') }}">
+                            <i class="cc AMP-alt"><span class="path1"></span><span
+                                    class="path2"></span></i>
+                            <span>ARSIP</span>
+                            <span class="pull-right-container"></span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>

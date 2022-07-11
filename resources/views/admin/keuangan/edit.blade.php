@@ -40,7 +40,7 @@
                             </div>
                         @endif
                         <form class="form" novalidate action="{{ route('keuangan.update', $keuangan->id) }}"
-                            method="post">
+                            method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <input type="hidden" id="edit_keuangan">
@@ -63,22 +63,28 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Debat</label>
-                                            <input type="text" class="form-control number" value="{{ $keuangan->debet }}"
-                                                id="debet" name="debet">
+                                            <input type="text" class="form-control number"
+                                                value="{{ $keuangan->debet }}" id="debet" name="debet">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Kredit</label>
-                                            <input type="text" class="form-control number" value="{{ $keuangan->kredit }}"
-                                                id="kredit" name="kredit">
+                                            <input type="text" class="form-control number"
+                                                value="{{ $keuangan->kredit }}" id="kredit" name="kredit">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Saldo</label>
-                                            <input type="text" class="form-control number" value="{{ $keuangan->saldo }}"
-                                                id="saldo" name="saldo">
+                                            <input type="text" class="form-control number"
+                                                value="{{ $keuangan->saldo }}" id="saldo" name="saldo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label" for="kwitansi">Kwitansi</label>
+                                            <input type="file" class="form-control" id="kwitansi" name="kwitansi">
                                         </div>
                                     </div>
 

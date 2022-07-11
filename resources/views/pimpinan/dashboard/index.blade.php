@@ -16,7 +16,6 @@
 
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -33,7 +32,6 @@
                                     <div class="row">
                                         <div class="col-12 col-xl-7">
                                             <h2>Selamat Datang Kembali, <strong>Pimpinan!</strong></h2>
-
                                         </div>
                                         <div class="col-12 col-xl-5"></div>
                                     </div>

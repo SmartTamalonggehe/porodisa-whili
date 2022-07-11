@@ -40,7 +40,8 @@
                                 </ul>
                             </div>
                         @endif
-                        <form class="form" action="{{ route('keuangan.store') }}" method="post">
+                        <form class="form" action="{{ route('keuangan.store') }}" method="post"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="box-body">
                                 <div class="row">
@@ -53,15 +54,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Keterangan </label>
-                                            <textarea type="text" class="form-control" id="keterangan" name="keterangan"
-                                                placeholder="Masukan Keterangan "></textarea>
+                                            <textarea type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Masukan Keterangan "></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Debet</label>
-                                            <input type="text" class="form-control number" id="debet" name="debet" value="0"
-                                                placeholder="Masukan Debet ">
+                                            <input type="text" class="form-control number" id="debet" name="debet"
+                                                value="0" placeholder="Masukan Debet ">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -78,12 +78,15 @@
                                                 value="0">
                                         </div>
                                     </div>
-
-
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label" for="kwitansi">Kwitansi</label>
+                                            <input type="file" class="form-control" id="kwitansi" name="kwitansi">
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- /.box-body -->
                                 <div class="box-footer text-end">
-
                                     <button type="submit" class="btn btn-primary">
                                         <i class="ti-save-alt"></i> Simpan
                                     </button>
@@ -123,6 +126,7 @@
                                         <th>Debet</th>
                                         <th>Kredit</th>
                                         <th>Saldo</th>
+                                        <th>Kwitansi</th>
                                         <th>Opsi</th>
                                     </tr>
                                 </thead>
@@ -135,6 +139,11 @@
                                             <td>{{ $item->debet }}</td>
                                             <td>{{ $item->kredit }}</td>
                                             <td>{{ $item->saldo }}</td>
+                                            <td>
+                                                <img class="img-thumbnail"
+                                                    src="{{ asset('storage/kwitansi/' . $item->kwitansi) }}"
+                                                    alt="" srcset="">
+                                            </td>
                                             <td align="center">
                                                 <a href="{{ route('keuangan.edit', $item->id) }}"><button type="submit"
                                                         class="waves-effect waves-light btn btn-outline btn-success mb-5">Edit</button></a>

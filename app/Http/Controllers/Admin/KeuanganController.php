@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\keuangan;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class KeuanganController extends Controller
 {
@@ -49,17 +50,16 @@ class KeuanganController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->all();
+
         $this->validation($request);
+        $ekstensi_kwitansi = $request->file('kwitansi')->extension();
+        $nama_kwitansi = time() . '.' . $ekstensi_kwitansi;
+        Storage::putFileAs('public/kwitansi', $request->kwitansi, $nama_kwitansi);
+        $data['kwitansi'] = $nama_kwitansi;
+
         // validation not success then return back
-
-
-        keuangan::create([
-            'tgl' => $request->tgl,
-            'keterangan' => $request->keterangan,
-            'debet' => $request->debet,
-            'kredit' => $request->kredit,
-            'saldo' => $request->saldo
-        ]);
+        keuangan::create($data);
         return redirect()->route('keuangan.index');
     }
 
@@ -100,13 +100,21 @@ class KeuanganController extends Controller
      */
     public function update(Request $request, $id)
     {
-        keuangan::find($id)->update([
-            'tgl' => $request->tgl,
-            'keterangan' => $request->keterangan,
-            'debet' => $request->debet,
-            'kredit' => $request->kredit,
-            'saldo' => $request->saldo
-        ]);
+        $kwitansi = keuangan::findOrFail($id);
+
+        if ($request->hasFile('kwitansi')) {
+            // delete file
+            Storage::delete('public/kwitansi/' . $kwitansi->kwitansi);
+            # code...
+            $ekstensi_kwitansi = $request->file('kwitansi')->extension();
+            $nama_kwitansi = time() . '.' . $ekstensi_kwitansi;
+            Storage::putFileAs('public/kwitansi', $request->kwitansi, $nama_kwitansi);
+        } else {
+            $nama_kwitansi = $kwitansi->kwitansi;
+        }
+        $data['kwitansi'] = $nama_kwitansi;
+
+        $kwitansi->update($data);
         return redirect()->route('keuangan.index');
     }
 
@@ -118,7 +126,11 @@ class KeuanganController extends Controller
      */
     public function destroy($id)
     {
-        keuangan::destroy($id);
-        return redirect()->route('keuangan.index');
+        $kwitansi = keuangan::findOrFail($id);
+        // delete file
+        Storage::delete('public/kwitansi/' . $kwitansi->kwitansi);
+        $kwitansi->delete();
+        return redirect()->route('keuangan.index')
+            ->with('berhasil', 'Data Berhasil Dihapus');
     }
 }

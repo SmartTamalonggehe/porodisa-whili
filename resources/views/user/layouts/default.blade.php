@@ -1,32 +1,32 @@
 @include('user.layouts.head')
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-	
-<div class="wrapper">
-	<div id="loader"></div>
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
 
-            @include('user.layouts.navbar')
-              
-        
-            <!-- Content Wrapper. Contains page content -->
-                <div class="content-wrapper">
-                <div class="container-full">
-            <!-- Content Header (Page header) -->
-		       
+    <div class="wrapper">
+        <div id="loader"></div>
 
-            @yield('main')
+        @include('user.layouts.navbar')
 
-            @include('user.layouts.sidebar')
 
-                    </div>
-                <!-- end page content -->
-                    </div>
-                <!-- end page-wrapper -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="container-full">
+                <!-- Content Header (Page header) -->
 
-            @include('user.layouts.footer')
 
-            @include('user.layouts.script')
-  
+                @yield('main')
+
+                @include('user.layouts.sidebar')
+
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        @include('user.layouts.footer')
+
+        @include('user.layouts.script')
+
 </body>
 
 </html>

@@ -1,28 +1,29 @@
 @include('admin.layouts.head')
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+    {{-- dark-skin --}}
     <div class="wrapper">
         <div id="loader"></div>
-    
-            @include('admin.layouts.navbar')
 
-            <!-- Content Wrapper. Contains page content -->
-                <div class="content-wrapper">
-	            <div class="container-full">
-		    <!-- Content Header (Page header) -->
+        @include('admin.layouts.navbar')
 
-            @yield('main')
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="container-full">
+                <!-- Content Header (Page header) -->
 
-            @include('admin.layouts.sidebar')
+                @yield('main')
 
-                </div>
+                @include('admin.layouts.sidebar')
+
+            </div>
             <!-- end page content -->
-                </div>
-            <!-- end page-wrapper -->
+        </div>
+        <!-- end page-wrapper -->
 
-            @include('admin.layouts.footer')
+        @include('admin.layouts.footer')
 
-            @include('admin.layouts.script')
+        @include('admin.layouts.script')
 
 </body>
 

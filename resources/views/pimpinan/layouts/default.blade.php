@@ -1,23 +1,23 @@
     @include('pimpinan.layouts.head')
 
     @include('pimpinan.layouts.head')
-              
-        <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-	
+
+    <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+
         <div class="wrapper">
-        <div id="loader"></div>
-    
-     @include('pimpinan.layouts.navbar')
+            <div id="loader"></div>
 
-        @yield('main')
+            @include('pimpinan.layouts.navbar')
 
-    @include('pimpinan.layouts.sidebar')
+            @yield('main')
 
-    @include('pimpinan.layouts.footer')
+            @include('pimpinan.layouts.sidebar')
 
-    @include('pimpinan.layouts.script')
-  	
+            @include('pimpinan.layouts.footer')
+
+            @include('pimpinan.layouts.script')
+
 
     </body>
-    </html>
 
+    </html>
